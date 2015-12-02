@@ -21,7 +21,7 @@ Install Node.js with Ubuntu Package Manager
 > npm -v
 	1.3.10
 
-# Install node module[s].
+# We can install node module[s] in two ways.
 1. Permanent 
 
 > npm install body-parser -- save
