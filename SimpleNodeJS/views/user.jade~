@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+
+  body
+    h1= title
+    p Welcome to Test #{name} #{referer}
+    div#container.col
+      p.id test post page.
+   a(href="#{referer}") Back
+
+   div#html
+     !{html}

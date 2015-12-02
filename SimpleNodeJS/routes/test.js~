@@ -1,0 +1,21 @@
+
+/*
+ * GET test page.
+ */
+var url = require("url");
+
+exports.test = function(req, res){
+  var refererHeader = req.header('Referer') != undefined ? req.header('Referer') : '/' ;
+  var refererURL = url.parse(refererHeader, true);
+  //console.log('Referer Header:'+refererHeader+", RefererURL Query:"+refererURL.query+", Path :"+refererURL.path);
+  var innerHTML = "<a href='/testPost'>Next</a>";
+  res.render('test', { page: 'home', title: 'Conduira', name: 'conduira', referer: refererURL.path, html: innerHTML });
+};
+
+exports.testPost = function(req, res){
+  var refererHeader = req.header('Referer') != undefined ? req.header('Referer') : '/' ;
+  var refererURL = url.parse(refererHeader, true);
+  //console.log('Referer Header:'+refererHeader+", RefererURL Query:"+refererURL.query+", Path :"+refererURL.path);
+  var innerHTML = "<a href='/test'>Next</a>";
+  res.render('user', { page: 'test post', title: 'test post', name: 'test post', referer: refererURL.path, html: innerHTML });
+};

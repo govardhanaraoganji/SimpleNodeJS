@@ -1,0 +1,17 @@
+//include index.html
+doctype html
+html(lang="en")
+	head
+		title= title
+	body
+		h1= title
+		p Welcome to #{name} #{referer}
+		div#container.col
+			p.id You are amazing.
+
+		input(ng-model="sometext", type="text")
+
+		h1 Hello, {{ sometext == '' ? 'How are you ?' :  sometext}}
+
+		div#html
+			!{html}
